@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int n = 6; float r = 0;
+	int a[6] = {9, 4, 1, -9, 0, 2};
+	float b[6] = {};
+	cout << "B = {";
+	for (int j = 0; j < n; j++) {
+		r += a[j];
+		b[j] = r / (j + 1);
+		cout << b[j] << ", ";
+	}
+	cout << "}";
+}
