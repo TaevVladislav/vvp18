@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int n = 6; int j = 10000000000000; double w = -1000000000000; int k; int m;
+int main()
+{
+    int a[6] = { -40, 70, -60, -5, -4, -80 };
+    int b[6] = {};
+    int p[6] = {};
+    for (int q = 0; q < n; q++) {
+        b[q] = 1;
+    }
+    for (int i = 0; i < n; i++) {
+        if (a[i] < j) {
+            j = a[i];
+            k = i;
+        }
+    }
+    for (int t = 0; t < n; t++) {
+        if (a[t] > w) {
+            w = a[t];
+            m = t;
+        }
+    }
+    for (int q = 0; q < n; q++) {
+        if ((q > k and q < m) or (q < k and q > m)) {
+            b[q] = 0;
+        }
+    }
+    for (int q = 0; q < n; q++) {
+        p[q] = a[q] * b[q];
+        cout << p[q] << ", ";
+    }
+}
